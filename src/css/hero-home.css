@@ -1,0 +1,266 @@
+.hero {
+    width: 100%;
+    padding: var(--spacing-lg) var(--spacing-xl);
+  }
+  
+  .hero-container {
+    position: relative;
+    width: 1375px;
+    max-width: 1357px;
+    height: 688px;
+    margin: 0 auto;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 1375px;
+    height: 930px;
+    object-fit: cover;
+    filter: blur(12px);
+    transform: scale(1.05);
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    mask: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 97.35%
+    );
+    -webkit-mask: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 97.35%
+    );
+    backdrop-filter: blur(7.5px);
+    mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 59.29%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--spacing-lg);
+  }
+  
+  .hero-number {
+    position: absolute;
+    bottom: var(--spacing-xl);
+    left: var(--spacing-xl);
+    font-size: 6rem;
+    font-weight: 900;
+    color: rgba(255,255,255,0.2);
+    user-select: none;
+  }
+  
+  .hero-title, .media-box-blur {
+    font-family: var(--font-secondary);
+    font-weight: 800;
+    font-size: 128px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .hero-subtitle-box{
+    width: 607px;
+    height: 55px;
+  }
+  .hero-subtitle-box, .btn {
+    backdrop-filter: blur(16.5px);
+    background: var(--color-bg-gradient);
+    border: 1px solid var(--color-border-gradient);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md) var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-subtitle {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--color-primary);
+  }
+  
+  .hero-buttons {
+    width: 262px;
+    height:55px;
+    display: flex;
+    justify-content: center;
+    gap: 0 10px;
+  }
+  
+  @media (min-width: 640px) {
+    .hero-buttons {
+      flex-direction: row;
+    }
+  }
+  
+  .btn {
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+    display: inline-flex;
+
+  }
+  .btn:hover {
+    background: var(--hover-bg-gradient-white);
+  }
+  .btn-primary, .btn-secondary{
+    display: flex;
+    justify-content: center;
+    font-weight: var(--font-weight-medium);
+    font-size: 20px;
+  }
+  .btn-primary{
+    width: 201px;
+  }
+  .btn-secondary{
+    width: 54px;
+  }
+
+  .media-box-blur {
+    background: linear-gradient(to right, #00514B 70%, #00514cbb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: blur(1px); 
+}
+
+
+/* حالت دسکتاپ (بزرگتر از 1024px) */
+@media (min-width: 1025px) {
+  
+  .hero-title {
+    font-size: 128px;
+  }
+
+  .hero-subtitle-box {
+    width: 607px;
+    height: 55px;
+  }
+
+  .hero-buttons {
+    width: 262px;
+    height: 55px;
+  }
+}
+
+/* حالت تبلت (بین 768px تا 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero-container {
+    width: 95%;
+    height: 600px;
+  }
+  .hero-bg{
+    width: 100%;
+    height: 100%;
+  }
+  .hero-title {
+    font-size: 96px ; /* کاهش اندازه فونت */
+  }
+
+  .hero-subtitle-box {
+    width: 500px ;
+    height: 45px ;
+    font-size: 20px;
+  }
+
+  .hero-buttons {
+    width: 200px ;
+    height: 45px ;
+    white-space: nowrap; 
+  }
+}
+
+/* حالت موبایل (کوچکتر از 768px) */
+@media (max-width: 768px) {
+  .hero-container {
+    width: 90%; /* عرض کامل صفحه */
+    height: 600px;
+  }
+  .hero-bg{
+    width: 100%;
+    height: 100%;
+  }
+  .hero-title {
+    font-size: 64px; /* کاهش بیشتر اندازه فونت */
+  }
+
+  .hero-subtitle-box {
+    width: 607px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .hero-buttons {
+    width: 150px;
+    height: 35px;
+    white-space: nowrap; 
+    font-size: 18px;
+  }
+}
+
+/* حالت گوشی‌های کوچک‌تر (کوچکتر از 425px) */
+@media (max-width: 425px) {
+  .hero-container {
+    width:343px; /* عرض کامل صفحه */
+    height: 463px; /* ارتفاع خودکار برای محتوا */
+  }
+  .hero-bg{
+    width: 100%;
+    height: 100%;
+  }
+  .hero-title {
+    width: 271px;
+    height: 49px;
+    left: 53px;
+    font-size: 40px ; 
+
+    font-weight: var(--font-weight-extraBold);
+  }
+
+  .hero-subtitle-box {
+    width: 272px ; 
+    height: 50px; 
+    top: 253px;
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .hero-buttons {
+    width: 120px;
+  }
+  .btn-primary{
+    width: 107.4px;
+    border-radius: 9px;
+    white-space: nowrap; 
+    font-size: 12px;
+  }
+  .btn-secondary{
+    border-radius: 9px;
+  }
+  .send-icon{
+    width: 28px;
+    height: 20.39px;
+    border-radius: 9px;
+  }
+
+}

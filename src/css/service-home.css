@@ -1,0 +1,144 @@
+.service-section {
+  width: 100%;
+  background: rgba(147, 192, 188, 0.27);
+  padding: 64px 0;
+}
+
+.service-section-inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 24px;
+  color: #0f172a;
+}
+
+.service-section-title {
+  margin: 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.1;
+  background: linear-gradient(90deg, #00514B 0%, #00B7A9 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+
+.service-section-subtitle {
+  margin: 12px auto 38px;
+  max-width: 720px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #111827;
+}
+
+.service-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.service-item {
+  border-bottom: 2px solid #00514b;
+}
+
+.service-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 12px;
+  color: #111827;
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+
+.service-link:hover {
+  background:linear-gradient(90deg, #00514B 0%, #00B7A9 100%);
+;
+}
+
+.service-copy {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.service-number {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.service-name {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.service-arrow {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.service-arrow-icon {
+  width: 22px;
+  height: 22px;
+  fill: #1f1f1f;
+}
+
+@media (max-width: 768px) {
+  .service-section {
+    padding: 44px 0;
+  }
+
+  .service-section-inner {
+    padding: 0 16px;
+  }
+
+  .service-section-title {
+    font-size: 32px;
+  }
+
+  .service-section-subtitle {
+    font-size: 14px;
+    margin: 10px auto 26px;
+    max-width: 320px;
+  }
+
+  .service-link {
+    padding: 18px 6px;
+  }
+
+  .service-copy {
+    gap: 12px;
+  }
+
+  .service-number {
+    font-size: 16px;
+  }
+
+  .service-name {
+    font-size: 16px;
+  }
+
+  .service-arrow {
+    width: 28px;
+    height: 28px;
+  }
+
+  .service-arrow-icon {
+    width: 19px;
+    height: 19px;
+  }
+}

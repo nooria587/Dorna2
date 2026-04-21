@@ -254,7 +254,7 @@ a{
 /*حالت موبایل (کوچکتر از 768px) */
 @media (max-width: 768px) {
   .navbar {
-    width: 343px;
+    width: 85%;
     height: 50px;
     border-radius: 100px;
     margin: 29px auto;

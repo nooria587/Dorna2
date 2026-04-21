@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'Milky Matcha';
+    /* آدرس‌دهی نسبی به پوشه فونت */
+    src: url('../assets/Milky Matcha.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Section: Our Works */
+.works-home {
+  position: relative;
+  padding: 100px 20px;
+  text-align: center;
+  overflow: hidden;
+  /* ایجاد یک لایه جدید برای نگه داشتن واترمارک روی پس‌زمینه بادی */
+  z-index: 1; 
+}
+
+.works-watermark {
+  position: absolute;
+  left: 50%;
+  bottom: 230px; /* بیار پایین سکشن */
+  transform: translateX(-50%);
+
+  font-family: 'Milky Matcha', sans-serif;
+  font-size: 128px; /* 🔥 بزرگش کن */
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0%;
+  white-space: nowrap;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+
+  background: linear-gradient(90deg, #07383570, rgba(0, 143, 133, 0.25));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* حذف دیوار سفید کانتینر */
+.works-home .container {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+.works-header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 60px;
+}
+
+.works-title {
+  /* ابعاد و تایپوگرافی دقیق از فیگما */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize; /* برای Title Case */
+  
+  /* اعمال گرادینت دو رنگ درخواستی */
+  background: linear-gradient(to right, rgba(0, 81, 75, 1), rgba(0, 183, 169, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  display: inline-block;
+  margin-bottom: 15px; /* فاصله تا متن زیرین */
+}
+
+.works-subtitle {
+  /* ابعاد و تایپوگرافی دقیق از فیگما */
+  font-family: 'Montserrat', sans-serif;
+  width: 659px; /* عرض دقیق باکس متن */
+  font-size: 24px;
+  font-weight: 500; /* حالت Medium */
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize; /* برای Title Case */
+  
+  /* رنگ مشکی خالص طبق اسکرین‌شات */
+  color: rgba(0, 0, 0, 1);
+  
+  /* تراز وسط */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* کارت‌ها */
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 50px;
+}
+
+.work-card {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.25);
+  margin-left: -120px;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  /* ایجاد لبه بسیار ظریف و خفیف */
+  border: 3px solid #ffffff; /* فقط ۲ پیکسل سفید خالص */
+  outline: 1px solid rgba(0, 0, 0, 0.03); /* یک خط بسیار بسیار نازک خاکستری برای جدا شدن لبه‌ها */
+  padding: 1px; /* حذف فاصله اضافی */
+  display: block;
+}
+
+.work-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* حذف border-radius داخلی چون دیگر پدینگ نداریم */
+  border-radius: 18px; 
+}
+
+/* چرخش ۶ کارت */
+.card-1 { transform: translateY(30px); z-index: 2; top: 3389.39px; left: 1007.62px; }
+.card-2 { transform: rotate(4.88deg); z-index: 3; top: 3361px; left: 822.76px;}
+.card-3 { transform: rotate(-8.77deg); z-index: 4; top: 3374.39px; left: 655.89px; }
+.card-4 { transform: rotate(5.08deg); z-index: 5; top: 3368px; left: 471.85px;}
+.card-5 { transform: rotate(-3.78deg); z-index: 6; top: 3385.39px; left: 326.62px; }
+.card-6 { transform: rotate(-6.46deg) translateY(30px); z-index: 7; top: 
+3371.97px; left: 115px;}
+
+.work-card:hover {
+  transform: translateY(-30px) rotate(0deg) scale(1.08);
+  z-index: 100;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.filter-tabs {
+  width: 720px;
+  height: 69px;
+  margin: 100px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px; /* فاصله دکمه‌ها از لبه باکس */
+  
+  background-color: #ffffff;
+  /* اصلاح لبه‌ها به مستطیل نرم طبق تصویر */
+  border-radius: 16px; 
+  box-shadow: 30px 15px 25px rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 4;
+}
+
+.tab-item {
+  /* تایپوگرافی دقیق از فیگما */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500; /* Medium */
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize; /* برای Title Case */
+  
+  /* رنگ مشکی خالص درخواستی */
+  color: rgba(0, 0, 0, 1);
+
+  /* تنظیمات اولیه دکمه */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 20px; /* فاصله داخلی برای متن‌ها */
+  height: 100%; /* برای پر کردن ارتفاع باکس اصلی */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+
+/* استایل حالت هاور و فعال (آیتم انتخاب شده) */
+.tab-item:hover, 
+.tab-item.active {
+  /* ابعاد دقیق از فیگما */
+  width: 176px;
+  height: 43px;
+  
+  /* رنگ و شفافیت */
+  background-color: rgba(0, 81, 75, 1);
+  color: #ffffff; /* تغییر رنگ متن به سفید برای خوانایی */
+  
+  /* انحنای لبه‌ها طبق فیگما */
+  border-radius: 8px;
+  
+  /* برای اینکه جابه‌جایی نرم باشد */
+  transition: all 0.3s ease;
+  
+  /* اطمینان از وسط‌چین بودن متن داخل باکس سبز */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .works-home {
+    padding: 60px 10px;
+  }
+
+  .works-watermark{
+    font-size: 100px;
+  }
+
+  .works-subtitle {
+    width: 90%; /* جلوگیری از عریض شدن متن در موبایل */
+    font-size: 18px;
+  }
+
+  /* تنظیم چیدمان کارت‌ها برای موبایل */
+  .cards-wrapper {
+    height: auto;
+    flex-wrap: wrap; /* اجازه شکستن خط برای کارت‌ها */
+    gap: 20px;
+    padding-left: 0;
+    margin-top: 30px;
+  }
+
+  .work-card {
+    width: 250px; /* کوچک کردن ابعاد کارت */
+    height: 250px;
+    margin-left: 0; /* حذف تداخل برای نمایش بهتر در موبایل */
+    transform: rotate(0deg) !important; /* حذف چرخش‌ها در موبایل */
+  }
+
+  /* تنظیم تب‌ها برای موبایل */
+  .filter-tabs {
+    width: 95%;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .tab-item {
+    font-size: 12px;
+    padding: 8px 10px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .works-title {
+    font-size: 30px;
+  }
+  
+  .work-card {
+    width: 200px;
+    height: 200px;
+  }
+}

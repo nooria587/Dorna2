@@ -1,0 +1,205 @@
+.vision-home {
+  padding: 100px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.vision-header {
+  text-align: center;
+  /* محاسبه فاصله دقیق طبق ابعاد Group 21 فیگما */
+  margin-bottom: 0px; 
+}
+
+.vision-title {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* ابعاد دقیق از اسکرین‌شات فیگما */
+  width: 368px;
+  height: 134px;
+  
+  /* اطمینان از وسط‌چین بودن محتوا در این ابعاد */
+  justify-content: center;
+}
+
+/* ردیف اول: From Vision + ستاره */
+.vision-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  direction: ltr; /* برای اینکه ستاره سمت راست بماند */
+  
+  /* تنظیم فونت و ضخامت */
+  font-size: 40px;
+  font-weight: 700; /* یا 700 برای بولد شدن */
+  
+  /* اعمال گرادینت روی متن */
+  background: linear-gradient(to right, rgba(0, 81, 75, 1), rgba(0, 183, 169, 1));
+  -webkit-background-clip: text; /* متن را ماسک می‌کند */
+  -webkit-text-fill-color: transparent; /* داخل متن را خالی می‌کند تا گرادینت دیده شود */
+}
+
+.vision-star {
+  width: 84px; /* سایز ستاره */
+  height: 84px;
+  display: flex;
+  align-items: center;
+}
+
+.vision-star img {
+  width: 100%;
+  height: auto;
+}
+
+/* ردیف دوم: To Growth */
+.vision-bottom {
+  width: 346px;
+  height: 78px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+
+  /* نزدیک کردن به ردیف بالا */
+  margin-top: -15px; /* این عدد را برای تنظیم فاصله کم و زیاد کن */
+
+  background: linear-gradient(90deg, rgba(0, 81, 75, 1), rgba(0, 183, 169, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+/* تنظیم کانتینر اصلی */
+.process-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+/* استایل دایره‌ها با ابعاد دقیق فیگما */
+.process-item {
+  width: 282.88px;
+  height: 280px;
+  border-radius: 50%;
+  margin-left: -20px; /* میزان تداخل طبق عکس جدید */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  z-index: 1;
+}
+
+.item-1 { margin-left: 0; }
+
+/* ایجاد خط دور دایره (Border) با افکت محو شونده */
+.process-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid #00514B;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+/* برعکس کردن جهت محوشوندگی برای آیتم‌های زوج */
+.item-2::before, .item-4::before {
+  -webkit-mask-image: linear-gradient(to top, black 50%, transparent 100%);
+  mask-image: linear-gradient(to top, black 50%, transparent 100%);
+}
+
+/* تنظیم ابعاد دقیق باکس متن داخل دایره از فیگما */
+.process-item .content {
+  width: 232.37px;
+  height: 126px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2; /* متن روی خطوط قرار می‌گیرد */
+}
+
+.process-item h3 {
+  font-size: 32px;
+  color: rgba(0, 81, 75, 1);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.process-item p {
+  font-size: 20px;
+  color: rgba(0, 81, 75, 1);
+  line-height: 1.5;
+  margin: 0;
+}
+/* اضافه کردن استایل لینک به کل دایره */
+.process-item a {
+  text-decoration: none; /* حذف خط زیر متن */
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer; /* تبدیل موس به دست */
+}
+
+/* افکت اختیاری: وقتی موس روی دایره رفت کمی بزرگ شود */
+.process-item:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.process-item:hover {
+  /* پر شدن کامل دایره با گرادینت ضخیم */
+  background: linear-gradient(135deg, rgba(0, 81, 75, 1) 0%, rgba(0, 183, 169, 1) 100%);
+  
+  /* حذف سایه‌های قبلی برای تمرکز روی رنگ اصلی */
+  box-shadow: 0 10px 20px rgba(0, 81, 75, 0.3);
+  
+  transform: scale(1.05); /* کمی بزرگتر شدن برای جلوه بیشتر */
+  transition: all 0.4s ease;
+}
+
+.process-item:hover::before {
+  /* مخفی کردن خط دور محوشونده در حالت هاور چون کل دایره رنگی شده */
+  opacity: 0;
+}
+
+/* تغییر رنگ متن‌ها به سفید برای خوانایی روی پس‌زمینه تیره */
+.process-item:hover h3, 
+.process-item:hover p {
+  color: #ffffff !important;
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .process-wrapper {
+    flex-direction: column; /* چیدمان دایره‌ها زیر هم */
+    gap: 40px; /* فاصله بین دایره‌ها در موبایل */
+    padding-left: 0; /* حذف پدینگ اضافی که برای تداخل گذاشته بودیم */
+  }
+
+  .process-item {
+    margin-left: 0; /* حذف تداخل در حالت موبایل برای خوانایی بهتر */
+    width: 260px; /* کمی کوچک‌تر برای موبایل‌های معمولی */
+    height: 260px;
+  }
+
+  .vision-bottom {
+    font-size: 48px; /* کوچک‌تر کردن تیتر اصلی برای موبایل */
+  }
+
+  .title-top {
+    font-size: 28px; /* کوچک‌تر کردن متن From Vision */
+  }
+}
+
